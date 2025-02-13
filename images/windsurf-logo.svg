@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="150" viewBox="0 0 400 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Wave icon -->
+  <g transform="translate(20, 35)">
+    <path d="M0 0 C8 0, 17 0, 25 0 C33 0, 42 0, 50 0" transform="rotate(-20)" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/>
+    <path d="M5 20 C13 20, 22 20, 30 20 C38 20, 47 20, 55 20" transform="rotate(-20)" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/>
+    <path d="M10 40 C18 40, 27 40, 35 40 C43 40, 52 40, 60 40" transform="rotate(-20)" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Windsurf text -->
+  <text x="100" y="80" font-family="Inter, -apple-system, sans-serif" font-size="72" font-weight="400" letter-spacing="-2" fill="black">windsurf</text>
+  
+  <!-- By Codeium text -->
+  <text x="100" y="125" font-family="Inter, -apple-system, sans-serif" font-size="42" font-weight="400" letter-spacing="-1" fill="black">by codeium</text>
+</svg>
