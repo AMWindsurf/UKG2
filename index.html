@@ -3,187 +3,561 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windsurf Cascade: Transforming Development at UKG</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Windsurf Cascade + UKG</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Remove active class from all buttons
+            document.querySelectorAll('.nav-tab').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Highlight selected button
+            document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+        }
+    </script>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="nav-content">
-                <div class="logos">
-                    <div class="logo ukg-logo">
-                        <img src="https://www.ukg.com/themes/custom/ukg/logo.svg" alt="UKG Logo" height="40">
-                    </div>
-                    <div class="logo-divider"></div>
-                    <div class="logo windsurf-logo">
-                        <img src="images/windsurf-logo.svg" alt="Windsurf by Codeium" class="windsurf-full-logo">
-                    </div>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-tabs">
+                    <button class="nav-tab active" data-tab="overview" onclick="switchTab('overview')">Overview</button>
+                    <button class="nav-tab" data-tab="onboarding" onclick="switchTab('onboarding')">Onboarding</button>
+                    <button class="nav-tab" data-tab="pricing" onclick="switchTab('pricing')">Pricing</button>
                 </div>
             </div>
         </nav>
-        <div class="hero">
-            <h1>Transforming Development at UKG</h1>
-            <p class="subtitle">Pilot Results & Strategic Value Analysis</p>
-        </div>
+        <section class="hero">
+            <h1>Windsurf Cascade + UKG</h1>
+            <p class="subtitle">Transforming Developer Productivity with AI-Powered Code Assistance</p>
+        </section>
     </header>
 
     <main>
-        <section id="executive-summary" class="content-section">
-            <h2>Executive Summary</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">37%</span>
-                    <span class="stat-desc">Code Written by AI</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">78%</span>
-                    <span class="stat-desc">Rated as Effective</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">84%</span>
-                    <span class="stat-desc">Would Miss Access</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">15%</span>
-                    <span class="stat-desc">PR Cycle Time Reduction</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">65.7</span>
-                    <span class="stat-desc">Hours Saved in 2 Weeks</span>
-                </div>
-            </div>
-        </section>
-
-        <section id="pilot-achievements" class="content-section">
-            <h2>Key Pilot Achievements</h2>
-            <div class="two-column">
-                <div class="column">
-                    <h3>Productivity Gains</h3>
-                    <ul class="achievement-list">
-                        <li>22.9 hours saved in last 7 days</li>
-                        <li>3,159 code completions (1645.3% increase)</li>
-                        <li>648 AI-assisted chats</li>
-                        <li>218 code explanations</li>
-                        <li>25 successful refactorings</li>
-                    </ul>
-                </div>
-                <div class="column">
-                    <h3>Developer Feedback</h3>
-                    <div class="testimonial">
-                        <blockquote>"This was a very powerful tool that I was able to leverage in my day to day. I was able to accomplish tasks much quicker."</blockquote>
-                        <cite>- Michael McCoy</cite>
-                    </div>
-                    <div class="testimonial">
-                        <blockquote>"Great at analyzing repositories and providing information and explanations within the context"</blockquote>
-                        <cite>- Asa Johnson</cite>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="roi" class="content-section">
-            <h2>ROI Analysis</h2>
-            <h3>Analyzing Common Enterprise Use Cases</h3>
-            <div class="assumptions">
-                <h4>Assumptions</h4>
-                <p>Software engineer costs $100/hr ($200k/yr with benefits, 20 work days/mo, 8 hrs/day)</p>
-            </div>
-            <div class="roi-grid">
-                <div class="roi-item">
-                    <h3>Large-Scale Migration</h3>
-                    <div class="comparison">
-                        <div class="before">Traditional: 10 hours ($1000)</div>
-                        <div class="after">With Cascade: 2 hours ($200)</div>
-                        <div class="savings">5x Cost Reduction</div>
-                    </div>
-                </div>
-                <div class="roi-item">
-                    <h3>Code Understanding</h3>
-                    <div class="comparison">
-                        <div class="before">Traditional: 2 hours ($200)</div>
-                        <div class="after">With Cascade: 6 minutes ($10)</div>
-                        <div class="savings">20x Cost Reduction</div>
-                    </div>
-                </div>
-                <div class="roi-item">
-                    <h3>Documentation</h3>
-                    <div class="comparison">
-                        <div class="before">Traditional: 2 hours ($200)</div>
-                        <div class="after">With Cascade: 15 minutes ($25)</div>
-                        <div class="savings">8x Cost Reduction</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="benefits" class="content-section">
-            <h2>Why Windsurf Cascade Over Plugin-Only</h2>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <h3>Enhanced Repository Context</h3>
-                    <ul>
-                        <li>Native multi-repo indexing support</li>
-                        <li>Deep code understanding across entire codebase</li>
-                        <li>Superior context awareness vs plugin limitations</li>
-                    </ul>
-                </div>
-                <div class="benefit-item">
-                    <h3>VS Code User Benefits</h3>
-                    <ul>
-                        <li>Seamless migration path</li>
-                        <li>Familiar interface with enhanced capabilities</li>
-                        <li>All configurations automatically transferred</li>
-                    </ul>
-                </div>
-                <div class="benefit-item">
-                    <h3>Advanced AI Integration</h3>
-                    <ul>
-                        <li>Purpose-built for AI-driven development</li>
-                        <li>Deeper integration than plugin constraints allow</li>
-                        <li>Enhanced multi-file editing capabilities</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="investment" class="content-section">
-            <h2>Investment Analysis</h2>
-            <div class="investment-details">
-                <h3>Cost-Benefit Breakdown</h3>
-                <ul class="cost-list">
-                    <li>Average developer cost: $100/hour</li>
-                    <li>Cascade credit cost: 2.5 cents</li>
-                    <li>ROI examples show 5x-20x cost reduction</li>
-                    <li>Projected annual savings based on pilot data:
+        <div id="overview" class="tab-content active">
+            <section class="content-section">
+                <h2>UKG's Vision & Goals</h2>
+                <div class="vision-grid">
+                    <div class="vision-item current-state">
+                        <h3>Current Landscape</h3>
                         <ul>
-                            <li>65.7 hours saved in 2 weeks = ~1,700 hours annually</li>
-                            <li>At $100/hour = $170,000 potential annual savings</li>
+                            <li>70%+ cloud infrastructure on GCP</li>
+                            <li>Uneven GitHub Copilot adoption</li>
+                            <li>Complex security requirements for proprietary code</li>
+                            <li>Extended onboarding cycles (4+ months to production)</li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
-        </section>
+                    </div>
+                    <div class="vision-item future-state">
+                        <h3>Target Objectives</h3>
+                        <ul>
+                            <li>Reduce time-to-production: 4 weeks vs 4 months</li>
+                            <li>35-50% increase in code writing efficiency</li>
+                            <li>15% improvement in PR cycle times</li>
+                            <li>100% IDE & language compatibility</li>
+                        </ul>
+                    </div>
+                    <div class="vision-item capabilities">
+                        <h3>Required Capabilities</h3>
+                        <ul>
+                            <li>Advanced security & data isolation</li>
+                            <li>Full IDE suite compatibility</li>
+                            <li>Comprehensive language support</li>
+                            <li>Seamless tooling integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-        <section id="next-steps" class="content-section">
-            <h2>Next Steps</h2>
-            <ol class="steps-list">
-                <li>Finalize seat allocation strategy</li>
-                <li>Initialize hybrid deployment planning</li>
-                <li>Begin VS Code user migration</li>
-                <li>Establish success metrics tracking</li>
-                <li>Schedule training workshops</li>
-            </ol>
-            <div class="cta-container">
-                <button class="cta-button">Get Started with Windsurf Cascade</button>
-            </div>
-        </section>
+            <section class="content-section">
+                <h2>ROI Analysis</h2>
+                <h3>Analyzing Common Enterprise Use Cases</h3>
+                <div class="assumptions">
+                    <h4>Assumptions</h4>
+                    <p>Software engineer costs $100/hr ($200k/yr with benefits, 20 work days/mo, 8 hrs/day)</p>
+                </div>
+                <div class="roi-grid">
+                    <div class="roi-item">
+                        <h3>Large-Scale Migration</h3>
+                        <div class="comparison">
+                            <div class="before">Traditional: 10 hours ($1000)</div>
+                            <div class="after">With Cascade: 2 hours ($200)</div>
+                            <div class="savings">5x Cost Reduction</div>
+                        </div>
+                    </div>
+                    <div class="roi-item">
+                        <h3>Code Understanding</h3>
+                        <div class="comparison">
+                            <div class="before">Traditional: 2 hours ($200)</div>
+                            <div class="after">With Cascade: 6 minutes ($10)</div>
+                            <div class="savings">20x Cost Reduction</div>
+                        </div>
+                    </div>
+                    <div class="roi-item">
+                        <h3>Documentation</h3>
+                        <div class="comparison">
+                            <div class="before">Traditional: 2 hours ($200)</div>
+                            <div class="after">With Cascade: 15 minutes ($25)</div>
+                            <div class="savings">8x Cost Reduction</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Success Metrics</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-desc">Reduction in Development Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50%</span>
+                        <span class="stat-desc">Fewer Code Review Iterations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-desc">Decrease in Bug Reports</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Enterprise Success Stories</h2>
+                <div class="enterprise-grid">
+                    <div class="enterprise-item featured-quote">
+                        <blockquote>
+                            "Windsurf Cascade has transformed our development workflow. Our teams are shipping features faster than ever while maintaining the highest quality standards. The AI-powered code assistance has become an indispensable part of our development process."
+                        </blockquote>
+                        <cite>VP of Engineering, JP Morgan Chase</cite>
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-number">10,000+</span>
+                                <span class="metric-label">Active Developers</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-number">45%</span>
+                                <span class="metric-label">Productivity Increase</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="enterprise-item">
+                        <blockquote>
+                            "The ROI was immediate. Our developers are spending more time on innovation and less time on routine tasks. Code quality has improved significantly while reducing the cognitive load on our teams."
+                        </blockquote>
+                        <cite>Senior Director of Engineering, Dell Technologies</cite>
+                        <div class="impact">
+                            <span class="impact-stat">3x</span>
+                            <span class="impact-desc">Faster Code Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Voice of UKG Teams</h2>
+                <div class="feedback-grid">
+                    <div class="feedback-item">
+                        <h3>WFM Team</h3>
+                        <blockquote>
+                            "Superior at repository analysis and code understanding. Saves significant time in fault investigation."
+                        </blockquote>
+                        <div class="key-features">
+                            <span class="feature">Repository Analysis</span>
+                            <span class="feature">Context-Aware Debugging</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-item">
+                        <h3>Pro Pay Team</h3>
+                        <blockquote>
+                            "More effective at unit test generation with smart mocking and stubbing compared to alternatives."
+                        </blockquote>
+                        <div class="key-features">
+                            <span class="feature">Enhanced Test Generation</span>
+                            <span class="feature">Intelligent Code Suggestions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-item">
+                        <h3>Engineering Acceleration</h3>
+                        <blockquote>
+                            "Accelerates development while improving code skills through better problem-solving assistance."
+                        </blockquote>
+                        <div class="key-features">
+                            <span class="feature">Development Acceleration</span>
+                            <span class="feature">Skill Enhancement</span>
+                        </div>
+                    </div>
+                    
+                    <div class="feedback-item">
+                        <h3>Flex Dev Team</h3>
+                        <blockquote>
+                            "Comprehensive support for test generation, code review, and bash tasks execution."
+                        </blockquote>
+                        <div class="key-features">
+                            <span class="feature">Multi-Language Support</span>
+                            <span class="feature">Automated Testing</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Industry Recognition</h2>
+                <div class="recognition-grid">
+                    <div class="recognition-item">
+                        <div class="recognition-content">
+                            <h4>Gartner®</h4>
+                            <p>"Leader in AI-Assisted Software Engineering - Magic Quadrant™"</p>
+                            <span class="recognition-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="recognition-item">
+                        <div class="recognition-content">
+                            <h4>Forrester Wave™</h4>
+                            <p>"Strong Performer in Developer Experience Platforms"</p>
+                            <span class="recognition-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="recognition-item">
+                        <div class="recognition-content">
+                            <h4>IDC MarketScape</h4>
+                            <p>"Leader in AI-Powered Development Tools"</p>
+                            <span class="recognition-year">2024</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="executive-summary" class="content-section">
+                <h2>Executive Summary</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">37%</span>
+                        <span class="stat-desc">Code Written by AI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">78%</span>
+                        <span class="stat-desc">Rated as Effective</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">84%</span>
+                        <span class="stat-desc">Would Miss Access</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15%</span>
+                        <span class="stat-desc">PR Cycle Time Reduction</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="benefits" class="content-section">
+                <h2>Key Benefits</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <h3>Enhanced Productivity</h3>
+                        <ul>
+                            <li>Faster code completion</li>
+                            <li>Reduced context switching</li>
+                            <li>Automated documentation</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Code Quality</h3>
+                        <ul>
+                            <li>Consistent coding standards</li>
+                            <li>Early bug detection</li>
+                            <li>Best practice suggestions</li>
+                        </ul>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>Developer Experience</h3>
+                        <ul>
+                            <li>Reduced cognitive load</li>
+                            <li>Faster onboarding</li>
+                            <li>Continuous learning</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="investment" class="content-section">
+                <h2>Investment Analysis</h2>
+                <div class="investment-details">
+                    <h3>Cost-Benefit Breakdown</h3>
+                    <ul class="cost-list">
+                        <li>Average developer cost: $100/hour</li>
+                        <li>Cascade credit cost: 2.5 cents</li>
+                        <li>ROI examples show 5x-20x cost reduction</li>
+                        <li>Projected annual savings based on pilot data:
+                            <ul>
+                                <li>65.7 hours saved in 2 weeks = ~1,700 hours annually</li>
+                                <li>At $100/hour = $170,000 potential annual savings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="next-steps" class="content-section">
+                <h2>Next Steps</h2>
+                <ol class="steps-list">
+                    <li>Finalize seat allocation strategy</li>
+                    <li>Initialize hybrid deployment planning</li>
+                    <li>Begin VS Code user migration</li>
+                    <li>Establish success metrics tracking</li>
+                    <li>Schedule training workshops</li>
+                </ol>
+                <div class="cta-container">
+                    <button class="cta-button">Get Started with Windsurf Cascade</button>
+                </div>
+            </section>
+        </div>
+
+        <div id="onboarding" class="tab-content">
+            <section class="hero">
+                <h1>90-Day Implementation Journey</h1>
+                <p class="subtitle">Strategic onboarding plan for enterprise-wide adoption</p>
+            </section>
+
+            <section class="content-section">
+                <h2>Implementation Timeline</h2>
+                <div class="timeline-grid">
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Foundational Setup</h3>
+                            <span class="duration">2-3 weeks</span>
+                        </div>
+                        <ul class="timeline-tasks">
+                            <li>Configure IDE integrations</li>
+                            <li>Establish monitoring</li>
+                            <li>Configure pod-specific settings</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Codeium 101</h3>
+                            <span class="duration">1-2 weeks</span>
+                        </div>
+                        <ul class="timeline-tasks">
+                            <li>Codeium Workshop</li>
+                            <li>Use case training</li>
+                            <li>Initial developer survey</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Onboarding</h3>
+                            <span class="duration">2-3 weeks</span>
+                        </div>
+                        <ul class="timeline-tasks">
+                            <li>Weekly office hours</li>
+                            <li>Hands-on training</li>
+                            <li>Adoption monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Adoption Checkpoint</h3>
+                            <span class="duration">1 week</span>
+                        </div>
+                        <ul class="timeline-tasks">
+                            <li>Feedback collection</li>
+                            <li>Performance review</li>
+                            <li>Strategy adjustment</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Key Initiatives</h2>
+                <div class="initiatives-grid">
+                    <div class="initiative-item">
+                        <h3>Pillar Based Enablement</h3>
+                        <p>Workshops per pillar, IDE specific training, and technical Q&A sessions.</p>
+                        <div class="initiative-metrics">
+                            <span class="metric">Weekly Workshops</span>
+                            <span class="metric">IDE Training</span>
+                        </div>
+                    </div>
+                    <div class="initiative-item">
+                        <h3>Multi-Region Support</h3>
+                        <p>Weekly syncs, dedicated Teams channels per value stream.</p>
+                        <div class="initiative-metrics">
+                            <span class="metric">24/7 Support</span>
+                            <span class="metric">Regional Teams</span>
+                        </div>
+                    </div>
+                    <div class="initiative-item">
+                        <h3>ROI Measurement</h3>
+                        <p>Track KPIs per pillar, measure developer productivity, and set benchmarks.</p>
+                        <div class="initiative-metrics">
+                            <span class="metric">KPI Tracking</span>
+                            <span class="metric">Productivity Metrics</span>
+                        </div>
+                    </div>
+                    <div class="initiative-item">
+                        <h3>Developer Engagement</h3>
+                        <p>Live demos, hackathons, office hours, and tailored training per pillar.</p>
+                        <div class="initiative-metrics">
+                            <span class="metric">Weekly Events</span>
+                            <span class="metric">Hands-on Labs</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section">
+                <h2>Admin Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-item">
+                        <h3>Documentation</h3>
+                        <ul class="resource-links">
+                            <li><a href="https://codeium.com/blog" target="_blank">Codeium Blog</a></li>
+                            <li><a href="https://codeium.com/university" target="_blank">Codeium University</a></li>
+                            <li><a href="https://docs.codeium.com/getstarted/overview" target="_blank">Getting Started Guide</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Support Channels</h3>
+                        <ul class="resource-links">
+                            <li><a href="https://help.codeium.com/hc/en-us" target="_blank">Enterprise Support Portal</a></li>
+                            <li><a href="https://discord.com/channels/1027685395649015980/1027694711852519467" target="_blank">Community Forum</a></li>
+                            <li><a href="https://codeium.com/windsurf" target="_blank">Windsurf Portal</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-item">
+                        <h3>Admin Tools</h3>
+                        <ul class="resource-links">
+                            <li>Usage Analytics Dashboard</li>
+                            <li>Team Management Console</li>
+                            <li>Security Configuration</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="pricing" class="tab-content">
+            <section class="hero">
+                <h1>UKG AI Development Pilot</h1>
+                <p class="subtitle">Strategic Investment Overview</p>
+            </section>
+
+            <section class="content-section">
+                <div class="pilot-intro">
+                    <p>At Codeium, we recognize the long-term potential of our partnership with UKG and are committed to investing in its success. To that end, we are structuring this pilot not just as a standard engagement, but as a true collaboration to help UKG accelerate its AI-powered development strategy.</p>
+                </div>
+
+                <h2>Revised 3-Month Pilot Pricing Breakdown</h2>
+                <div class="pricing-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Per Seat Price</th>
+                                <th>Users</th>
+                                <th>Total 3-Month Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Codeium Hybrid (SaaS + Hybrid Deployment)</td>
+                                <td>$39.00</td>
+                                <td>3,000</td>
+                                <td>$351,000</td>
+                            </tr>
+                            <tr>
+                                <td>Windsurf/Cascade (Agentic AI Assistant)</td>
+                                <td>$0.00</td>
+                                <td>3,000</td>
+                                <td>$0</td>
+                            </tr>
+                            <tr class="total">
+                                <td>Total Investment by UKG</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>$351,000</td>
+                            </tr>
+                            <tr class="investment">
+                                <td>Total Investment by Codeium</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>$657,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="commitment-section">
+                    <h2>🚀 Our Commitment: Investing in UKG's Future</h2>
+                    <ol>
+                        <li>UKG covers 3,000 seats of Codeium Hybrid for $39 per seat per month, totaling $351K over 3 months.</li>
+                        <li>Codeium will fully sponsor Windsurf/Cascade for all 3,000 engineers at no cost during the pilot.</li>
+                        <li>This ensures engineers gravitate to higher-value AI experiences organically—without feeling "forced" into yet another tool.</li>
+                    </ol>
+                </div>
+
+                <div class="requirements-section">
+                    <h2>🔹 What We Ask from UKG in Return</h2>
+                    
+                    <h3>1️⃣ Executive Sponsorship to Engage Engineering Leaders</h3>
+                    <p>Facilitate interviews with team leads and power users who adopt Windsurf to gain insights into:</p>
+                    <ul>
+                        <li>Which teams naturally gravitate toward the tool?</li>
+                        <li>What use cases prove most impactful?</li>
+                        <li>What measurable productivity & quality improvements emerge?</li>
+                    </ul>
+
+                    <h3>2️⃣ Pilot Data & Engagement to Measure ROI</h3>
+                    <ul>
+                        <li>Ensure UKG tracks adoption & developer feedback for both Codeium Hybrid and Windsurf/Cascade.</li>
+                        <li>Use this data to refine AI strategy and quantify the impact of AI-driven development at UKG.</li>
+                    </ul>
+
+                    <h3>3️⃣ Executive Alignment Between Varun & Sri</h3>
+                    <p>Arrange a strategic meeting between Varun and Sri to:</p>
+                    <ul>
+                        <li>Align on the pilot execution strategy and long-term AI roadmap.</li>
+                        <li>Explore broader opportunities for Codeium within UKG's ecosystem.</li>
+                    </ul>
+                </div>
+
+                <div class="investment-value">
+                    <h2>🔵 Codeium's Additional Investment Value: Up to $657,000</h2>
+                    <p>By providing Windsurf/Cascade at no cost, Codeium is making a significant investment in UKG's success:</p>
+                    <div class="calculation">
+                        <p>$73 × 3,000 potential Windsurf/Cascade users × 3 months = Up to $657,000</p>
+                    </div>
+                    <p>This ensures UKG has the freedom to evaluate the full value of Codeium's agentic AI without financial risk.</p>
+                </div>
+
+                <div class="next-steps">
+                    <h2>💬 Next Steps for UKG</h2>
+                    <ul class="checkmark-list">
+                        <li>Thomas to champion engineering leader engagement & interviews.</li>
+                        <li>Finalize rollout plan for 3,000 seats, ensuring seamless onboarding.</li>
+                        <li>Schedule ongoing check-ins to assess adoption trends & impact.</li>
+                        <li>Align Varun & Sri to discuss pilot strategy & future expansion.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
+        <p>&copy; 2025 Codeium. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
