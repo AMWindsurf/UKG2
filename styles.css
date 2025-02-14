@@ -1363,10 +1363,11 @@ footer {
 
 .credits-table td {
     font-size: 1.1rem;
+    text-align: left;
 }
 
 .credits-table td:last-child {
-    text-align: right;
+    text-align: left;
     font-weight: 500;
 }
 
