@@ -1391,7 +1391,7 @@ footer {
 
 /* Investment Tab Styles */
 .tab-content[data-tab="investment"] {
-    background-color: white;
+    background-color: #f8f9fa;
     padding: 2rem;
     border-radius: 8px;
 }
@@ -1420,6 +1420,7 @@ footer {
 .pricing-table td {
     padding: 1rem 1.5rem;
     border-bottom: 1px solid #dee2e6;
+    background-color: white;
 }
 
 .pricing-table tr:last-child td {
@@ -1453,4 +1454,11 @@ footer {
     padding: 1.5rem;
     background-color: #f8f9fa;
     border-radius: 6px;
+}
+
+/* Ensure tab panel has the right background */
+.tab-panel {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 8px;
 }
