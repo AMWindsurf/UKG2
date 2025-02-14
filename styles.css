@@ -1260,18 +1260,18 @@ footer {
 .credits-section {
     margin: 3rem 0;
     padding: 2rem;
-    background-color: #f8f9fa;
+    background-color: transparent;
     border-radius: 8px;
 }
 
 .credits-section h2 {
-    color: #333;
+    color: #fff;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
 
 .credits-section h3 {
-    color: #444;
+    color: #fff;
     margin: 2rem 0 1rem;
     font-size: 1.25rem;
 }
@@ -1280,18 +1280,52 @@ footer {
     width: 100%;
     margin-bottom: 2rem;
     border-collapse: collapse;
+    background-color: transparent;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .credits-table th,
 .credits-table td {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     text-align: left;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .credits-table th {
-    background-color: #f1f3f5;
+    background-color: rgba(255, 255, 255, 0.1);
     font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.credits-table td {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.credits-table td:last-child {
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Remove bottom border from last row */
+.credits-table tr:last-child td {
+    border-bottom: none;
+}
+
+@media screen and (max-width: 768px) {
+    .credits-table {
+        margin: 0 -1rem;
+        width: calc(100% + 2rem);
+        border-radius: 0;
+    }
+    
+    .credits-table th,
+    .credits-table td {
+        padding: 0.75rem 1rem;
+    }
 }
 
 .credit-policy ul {
@@ -1302,18 +1336,18 @@ footer {
 
 .credit-policy li {
     margin-bottom: 0.5rem;
-    color: #555;
+    color: #fff;
 }
 
 .additional-credits {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 1.5rem;
     border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .additional-credits p {
-    color: #333;
+    color: #fff;
     font-weight: 500;
     margin: 0;
 }
@@ -1321,28 +1355,27 @@ footer {
 /* Update pricing table header */
 .pricing-table th {
     padding: 1rem;
-    background-color: #f1f3f5;
+    background-color: rgba(255, 255, 255, 0.1);
     font-weight: 600;
     text-align: left;
 }
 
 .pricing-table td {
     padding: 1rem;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-table .total td,
 .pricing-table .investment td {
     font-weight: 600;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .credits-table {
     width: 100%;
     margin-bottom: 2rem;
     border-collapse: collapse;
-    background-color: white;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: transparent;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -1351,19 +1384,21 @@ footer {
 .credits-table td {
     padding: 1rem 1.5rem;
     text-align: left;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .credits-table th {
-    background-color: #f1f3f5;
+    background-color: rgba(255, 255, 255, 0.1);
     font-weight: 600;
-    color: #333;
+    color: #fff;
     white-space: nowrap;
 }
 
 .credits-table td {
     font-size: 1.1rem;
     text-align: left;
+    font-weight: 500;
+    color: #fff;
 }
 
 .credits-table td:last-child {
@@ -1391,14 +1426,14 @@ footer {
 
 /* Investment Tab Styles */
 .tab-content[data-tab="investment"] {
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 8px;
 }
 
 .pricing-table {
     margin-bottom: 2rem;
-    background-color: white;
+    background-color: transparent;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -1411,16 +1446,16 @@ footer {
 
 .pricing-table th {
     padding: 1rem 1.5rem;
-    background-color: #f1f3f5;
+    background-color: rgba(255, 255, 255, 0.1);
     font-weight: 600;
     text-align: left;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .pricing-table td {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #dee2e6;
-    background-color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
 }
 
 .pricing-table tr:last-child td {
@@ -1430,14 +1465,14 @@ footer {
 .pricing-table .total td,
 .pricing-table .investment td {
     font-weight: 600;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Credits Section */
 .credits-section {
     margin: 3rem 0;
     padding: 2rem;
-    background-color: white;
+    background-color: transparent;
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -1445,20 +1480,20 @@ footer {
 .credit-policy {
     margin: 2rem 0;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
 }
 
 .additional-credits {
     margin-top: 2rem;
     padding: 1.5rem;
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 6px;
 }
 
 /* Ensure tab panel has the right background */
 .tab-panel {
-    background-color: #f8f9fa;
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 8px;
 }
